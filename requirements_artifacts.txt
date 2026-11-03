@@ -1,0 +1,6 @@
+# Separate environment for building figures and the DOCX; does not replace experiments/requirements.txt.
+numpy==2.3.5
+matplotlib==3.10.8
+python-docx==1.2.0
+lxml==6.1.1
+# Outside pip: pandoc; LibreOffice or Microsoft Word to export the PDF.

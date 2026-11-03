@@ -1,0 +1,50 @@
+[
+  {
+    "n": 100,
+    "nx": 10,
+    "ny": 10,
+    "bounds_crs84": [
+      105.75,
+      20.95,
+      105.87,
+      21.07
+    ],
+    "ring_coordinate_pairs": 17,
+    "coordinate_decimal_places": 12,
+    "edge_segments": 4,
+    "interior_edge_zigzag_amplitude_fraction": 0.06,
+    "outer_boundary": "rectangle"
+  },
+  {
+    "n": 1000,
+    "nx": 25,
+    "ny": 40,
+    "bounds_crs84": [
+      105.75,
+      20.95,
+      105.87,
+      21.07
+    ],
+    "ring_coordinate_pairs": 17,
+    "coordinate_decimal_places": 12,
+    "edge_segments": 4,
+    "interior_edge_zigzag_amplitude_fraction": 0.06,
+    "outer_boundary": "rectangle"
+  },
+  {
+    "n": 10000,
+    "nx": 100,
+    "ny": 100,
+    "bounds_crs84": [
+      105.75,
+      20.95,
+      105.87,
+      21.07
+    ],
+    "ring_coordinate_pairs": 17,
+    "coordinate_decimal_places": 12,
+    "edge_segments": 4,
+    "interior_edge_zigzag_amplitude_fraction": 0.06,
+    "outer_boundary": "rectangle"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "crs": "EPSG:3857",
+  "tile_scheme": "XYZ",
+  "extent": 4096,
+  "buffer": 0,
+  "zooms": [
+    11,
+    13,
+    15
+  ],
+  "bounds_mercator": [
+    11772036.15138868,
+    2385917.619785345,
+    11785394.490283873,
+    2400227.2999253036
+  ],
+  "viewport_mercator": [
+    11777045.528474377,
+    2391283.7498378297,
+    11780385.113198174,
+    2394861.1698728194
+  ],
+  "viewport_width_fraction": 0.25,
+  "viewport_height_fraction": 0.25,
+  "source_ids_intersecting_view": 676,
+  "simplification": "none",
+  "quantization": "nearest integer on each tile extent4096",
+  "measurements": "Local warm-cache file reads, protobuf decode, Shapely materialization in Mercator coordinates. No HTTP requests, network or browser rendering were measured.",
+  "hausdorff_method": "Discrete GEOS/Shapely hausdorff_distance without densify",
+  "relative_area_error_definition": "sum_i area(P_i symmetric_difference reconstructed_P_i) / sum_i area(P_i), not symmetric difference between whole-coverage unions"
+}

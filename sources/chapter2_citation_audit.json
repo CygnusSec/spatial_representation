@@ -1,0 +1,171 @@
+{
+  "source": "Chapter 2 excerpt available from the previous pass: upload/page59-97.pdf",
+  "source_does_not_include": "The re-uploaded file page59-97(1).pdf is currently inaccessible; this file is not used.",
+  "book": "Rigaux, Scholl and Voisard (2002), Spatial Databases: With Application to GIS",
+  "chapter": "Chapter 2, Representation of Spatial Objects",
+  "printed_pages": "29–67",
+  "verified_structure": [
+    {
+      "section": "2.1 Geographic Space Modeling",
+      "printed_pages": "31–34"
+    },
+    {
+      "section": "2.1.1 Entity-Based Models",
+      "printed_pages": "31–33"
+    },
+    {
+      "section": "2.1.2 Field-Based Models",
+      "printed_pages": "34"
+    },
+    {
+      "section": "2.2.1 Tessellation",
+      "printed_pages": "35–37"
+    },
+    {
+      "section": "2.2.2 Vector Mode",
+      "printed_pages": "38–42"
+    },
+    {
+      "section": "2.2.3 Half-Plane Representation",
+      "printed_pages": "42–46"
+    },
+    {
+      "section": "2.3.1 Spaghetti Model",
+      "printed_pages": "47–48"
+    },
+    {
+      "section": "2.3.2 Network Model",
+      "printed_pages": "47–49"
+    },
+    {
+      "section": "2.3.3 Topological Model",
+      "printed_pages": "49–51"
+    },
+    {
+      "section": "2.4.2 The TIGER/Line Format",
+      "printed_pages": "54–61"
+    },
+    {
+      "section": "2.5 Bibliographic Notes",
+      "printed_pages": "64–67"
+    }
+  ],
+  "changes": {
+    "front_matter.json": [
+      {
+        "block": 4,
+        "field": "text",
+        "old": "The main source is Chapter 2 of Spatial Databases: With Application to GIS,",
+        "new": "The main theoretical source is Chapter 2 “Representation of Spatial Objects” (pp. 29–67) of the book Spatial Databases: With Application to GIS by Rigaux, Scholl and Voisard (2002),"
+      }
+    ],
+    "part1_theory.json": [
+      {
+        "block": 1,
+        "field": "text",
+        "old": "Chapter 2 by Rigaux, Scholl and Voisard lays the foundation for these choices through entity and field models, geometric representations and the structures that organize a collection of objects [1].",
+        "new": "Chapter 2 “Representation of Spatial Objects” of the book Spatial Databases: With Application to GIS by Rigaux, Scholl and Voisard lays the foundation for these choices through entity and field models, geometric representation and the organization of object collections [1, Chapter 2, pp. 29–51]."
+      },
+      {
+        "block": 7,
+        "field": "text",
+        "old": "Chapter 2 of the source book is the main organizing source, especially Sections 2.1 on spatial models, 2.2 on representation modes, 2.3 on object collections and 2.4 on data exchange [1].",
+        "new": "Chapter 2 “Representation of Spatial Objects” of Spatial Databases: With Application to GIS is the main organizing source [1, pp. 29–67]. Section 2.1 “Geographic Space Modeling” distinguishes entity and field models (pp. 31–34); Section 2.2 “Representation Modes” introduces tessellation, vector and half-planes (pp. 35–46); Section 2.3 “Representing the Geometry of a Collection of Objects” presents spaghetti, network and topology (pp. 46–51). Section 2.4 “Spatial Data Formats and Exchange Standards” has the TIGER/Line example (pp. 51–64); Section 2.5 contains the bibliographic notes (pp. 64–67)."
+      },
+      {
+        "block": 13,
+        "field": "text",
+        "old": "Geometry does not replace object identity [1, Sec. 2.1], [3].",
+        "new": "Geometry does not replace object identity [1, Sec. 2.1.1, pp. 31–33], [3]."
+      },
+      {
+        "block": 15,
+        "field": "text",
+        "old": "together with an interpolation rule [1], [3].",
+        "new": "together with an interpolation rule [1, Sec. 2.1.2, p. 34], [3]."
+      },
+      {
+        "block": 17,
+        "field": "text",
+        "old": "by an irregular triangular mesh or contour lines [1, Sec. 2.2].",
+        "new": "by an irregular triangular mesh or contour lines [1, Sec. 2.2.1–2.2.2, pp. 35–42]."
+      },
+      {
+        "block": 18,
+        "field": "caption",
+        "old": "conceptual frame based on [1]–[3].",
+        "new": "conceptual frame based on [1, Sec. 2.1–2.2, pp. 31–42], [2], [3]."
+      },
+      {
+        "block": 26,
+        "field": "text",
+        "old": "or a Delaunay triangulation [1], [8].",
+        "new": "or a Delaunay triangulation [1, Sec. 2.2.2, pp. 38–42], [8]."
+      },
+      {
+        "block": 29,
+        "field": "text",
+        "old": "and edges [1, Sec. 2.2.3].",
+        "new": "and edges [1, Sec. 2.2.3, pp. 42–46]."
+      },
+      {
+        "block": 37,
+        "field": "caption",
+        "old": "Representation basis from [1], [5].",
+        "new": "Representation basis from [1, Sec. 2.2.3, pp. 42–46], [5]."
+      },
+      {
+        "block": 39,
+        "field": "text",
+        "old": "although each polygon remains individually valid [1, Sec. 2.3.1].",
+        "new": "although each polygon remains individually valid [1, Sec. 2.3.1, pp. 47–48]."
+      },
+      {
+        "block": 40,
+        "field": "text",
+        "old": "not merely an operation that finds segment intersections [1, Sec. 2.3.2].",
+        "new": "not merely an operation that finds segment intersections [1, Sec. 2.3.2, pp. 47–49]."
+      },
+      {
+        "block": 41,
+        "field": "text",
+        "old": "and does not by itself guarantee that the data match reality [1, Sec. 2.3.3].",
+        "new": "and does not by itself guarantee that the data match reality [1, Sec. 2.3.3, pp. 49–51]."
+      },
+      {
+        "block": 42,
+        "field": "caption",
+        "old": "Concepts follow [1].",
+        "new": "Concepts follow [1, Sec. 2.3, pp. 46–51]."
+      },
+      {
+        "block": 52,
+        "field": "text",
+        "old": "The example in Chapter 2 uses TIGER/Line 1998.",
+        "new": "The TIGER/Line example in Section 2.4.2 of Chapter 2 of the book uses the 1998 dataset."
+      }
+    ],
+    "part3_experiments.json": [
+      {
+        "block": 1,
+        "field": "text",
+        "old": "Three experiments were designed to connect the concepts of Chapter 2 directly with the behavior of modern formats.",
+        "new": "Three experiments were designed to connect the concepts of Chapter 2 “Representation of Spatial Objects” [1, pp. 29–67] with the behavior of modern formats."
+      },
+      {
+        "block": 48,
+        "field": "text",
+        "old": "exchanged. Using vector coordinates in common does not make GeoJSON, TopoJSON, KML, MVT and GeoParquet serve the same data contract [1]–[3], [15]–[19].",
+        "new": "exchanged. Using vector coordinates in common does not make GeoJSON, TopoJSON, KML, MVT and GeoParquet serve the same data contract [1, Sec. 2.1–2.4, pp. 31–64], [2], [3], [15]–[19]."
+      },
+      {
+        "block": 61,
+        "field": "text",
+        "old": "in Chapter 2 still provides the basis for understanding modern technologies.",
+        "new": "in Chapter 2 “Representation of Spatial Objects” [1, pp. 31–51] still provides the basis for understanding modern technologies."
+      }
+    ]
+  },
+  "bibliography_record": "[1] is a cited chapter within the authored book, not a standalone book title.",
+  "unchanged_references": "[2]–[22] preserved; no renumbering."
+}

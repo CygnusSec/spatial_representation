@@ -1,0 +1,42 @@
+{
+  "python": "3.12.16 (main, Oct 28 2026, 02:01:35) [GCC 12.2.0]",
+  "python_executable": "/usr/local/bin/python",
+  "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.36",
+  "machine": "x86_64",
+  "logical_cpus_os": 8,
+  "affinity_cpus": 8,
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "shapely": "2.2.0",
+    "pyarrow": "26.0.0",
+    "pyproj": "3.8.0",
+    "topojson": "2.2",
+    "mapbox-vector-tile": "2.2.0",
+    "geopandas": "1.2.0",
+    "lxml": "6.1.1",
+    "protobuf": "6.33.6",
+    "pyclipper": "1.4.0",
+    "pyogrio": "0.13.0"
+  },
+  "geos": "3.14.1",
+  "proj": "9.8.1",
+  "cpu_max": "800000 100000",
+  "memory_max": "8589934592",
+  "cpu_model": "Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz",
+  "seed": 20261102,
+  "started_utc": "2026-11-03T05:56:59.057042+00:00",
+  "repeats": 5,
+  "timing": "perf_counter_ns; warm OS file cache; no fsync; gc.collect outside timed interval",
+  "geometry_precision": "12 decimal place input coordinates; TopoJSON quantization and simplification disabled",
+  "common_target": "list of id int, class int, and materialized Shapely Polygon objects",
+  "hausdorff_method": "Discrete GEOS/Shapely hausdorff_distance without densify; E2 also checks topological equality.",
+  "limitations": [
+    "Synthetic polygon coverage with shared zigzag edges and straight outer boundary, not real-world mixed geometry.",
+    "Serialization/reader implementations differ; timings are pipeline measurements, not inherent format speed.",
+    "GeoParquet-NONE and GeoParquet-ZSTD are separate codec configurations; gzip6 is a separate file-size experiment.",
+    "No cold-cache disk bandwidth, process memory, network, browser rendering or nationwide datasets measured.",
+    "MVT results intentionally involve clipping and quantization, and are not lossless full-dataset counterparts."
+  ],
+  "finished_utc": "2026-11-03T05:58:45.944207+00:00"
+}

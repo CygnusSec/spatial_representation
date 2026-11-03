@@ -1,0 +1,134 @@
+[
+  {
+    "type": "heading",
+    "level": 1,
+    "id": "formats",
+    "text": "4 Modern Formats and Technologies"
+  },
+  {
+    "type": "paragraph",
+    "text": "Exchanging features, maintaining shared boundaries, presenting on a globe, loading maps and analyzing tables require different ways of organizing data. Table 3 compares structure and purpose; the subsections clarify the information to control during conversion [15]–[19]."
+  },
+  {
+    "type": "table",
+    "caption": "Table 3 Structure and scope of use of the five formats",
+    "headers": [
+      "Format",
+      "Encoding and organization",
+      "Relations among objects",
+      "Suitable work"
+    ],
+    "widths": [
+      0.16,
+      0.29,
+      0.28,
+      0.27
+    ],
+    "rows": [
+      [
+        "GeoJSON [15]",
+        "JSON text; Feature and FeatureCollection.",
+        "Geometry stored separately; adjacent boundaries may repeat coordinates.",
+        "Exchanging features and API integration."
+      ],
+      [
+        "TopoJSON [16]",
+        "JSON; geometry references arcs.",
+        "Arcs can be shared in both directions.",
+        "Exchanging regions with many shared boundaries."
+      ],
+      [
+        "KML [17]",
+        "XML; objects, presentation styles and extended data.",
+        "No shared-arc structure among Placemarks.",
+        "Geographic presentation, annotation and globes."
+      ],
+      [
+        "MVT [18]",
+        "Protocol Buffers; layers and features in each tile.",
+        "Separate geometry; an object can be split across tiles.",
+        "Delivering maps by viewport and zoom level."
+      ],
+      [
+        "GeoParquet [19]",
+        "Columnar Parquet; geometry and attribute columns.",
+        "Boundaries encoded separately in each geometry.",
+        "Table analysis and exchange of large vector data."
+      ]
+    ]
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "GeoJSON feature exchange with a defined coordinate system"
+  },
+  {
+    "type": "paragraph",
+    "text": "RFC 7946 specifies GeoJSON coordinates in longitude, latitude order, in decimal degrees on WGS84, equivalent to OGC:CRS84. A third component, if present, is height in meters above the WGS84 ellipsoid. Therefore data in a projected planar system must be suitably transformed before being exported as conforming GeoJSON [15, Sec. 3.1.1 and 4]."
+  },
+  {
+    "type": "paragraph",
+    "text": "A Feature accepts a null geometry, and properties is a JSON object or null. Reading and writing must preserve these cases correctly. The number of decimal digits affects size but does not express measurement uncertainty; bbox describes extent and does not itself create an index [15, Sec. 3.2, 3.1.10 and 5]. Repeated boundary coordinates should be considered when exchanging many adjacent regions."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "TopoJSON arc sharing and quantization control"
+  },
+  {
+    "type": "paragraph",
+    "text": "TopoJSON connects directly to the idea of storing shared boundaries in Section 3. Lines and polygon rings reference arcs in the arcs array. A non-negative reference uses an arc in its stored direction; a negative reference j uses the arc with index ~j = −j−1 in the reverse direction. For instance, −1 denotes arc 0 reversed, not arc 1 [16, Sec. 2.1.4]."
+  },
+  {
+    "type": "paragraph",
+    "text": "Transform is an optional member. With quantization, the first two coordinate components are mapped to an integer grid and arcs are delta-encoded. This can reduce size but changes precision. To evaluate the effect of arc sharing alone, the baseline configuration must disable quantization and simplification. The CRS must be agreed by the exchanging parties. Arc references do not by themselves provide traffic rules, weights or a complete adjacency table [16, Sec. 2.1–2.2]."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "KML geometry tied to presentation"
+  },
+  {
+    "type": "paragraph",
+    "text": "KML suits cases where objects need names, descriptions, icons, line styles or a way of displaying height. Coordinates take the form longitude,latitude[,altitude]. The meaning of altitude depends on altitudeMode; the vertical reference of the standard uses the EGM96 geoid, unlike the ellipsoidal height in GeoJSON. Converting 3D data therefore requires checking both the height datum and the display mode [17, Sec. 9.20, 16.10 and Annex A]."
+  },
+  {
+    "type": "paragraph",
+    "text": "Schema and SimpleField declare attribute types; SchemaData and SimpleData supply the corresponding values. The experiment must keep the numeric type of object codes and avoid reading all XML values as strings. KML 2.3 continues to use the namespace http://www.opengis.net/kml/2.2. Text KML and compressed KMZ must be distinguished when comparing size [17, Sec. 9.5–9.6, 9.11 and Annex C]. The report uses 2D geometry, so it does not fully evaluate the 3D presentation abilities of KML."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Vector tiles delivering data by viewport"
+  },
+  {
+    "type": "paragraph",
+    "text": "MVT 2.1 encodes layers and features with Protocol Buffers. Geometry uses integer coordinates in the tile's local system; the reader must learn the position, projection and tiling scheme externally. Web Mercator, XYZ and extent 4096 are configuration choices, not mandated by the standard [18, Sec. 3–4]. Attributes use scalar values; JSON null has no direct encoding type [18, Sec. 4.1]."
+  },
+  {
+    "type": "paragraph",
+    "text": "Quantization can shift vertices or lose small details. Clipping at tile boundaries can split an object into several fragments; buffer and simplification are choices that must be published. Therefore object codes, duplicate fragments and post-decoding error must be checked, and the size of a viewport must be separated from the size of the whole dataset [18]. OGC API Tiles specifies access to tile and tileset resources; MVT specifies the encoded content. The two layers complement each other [20, Sec. 7–9 and 16.7]."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "GeoParquet columnar tables and data filtering conditions"
+  },
+  {
+    "type": "paragraph",
+    "text": "GeoParquet adds geographic metadata to Parquet. Version 1.1.0 is chosen as the experimental baseline, with the geometry column encoded in WKB. The CRS can be declared in PROJJSON: a missing crs field means CRS84, while a null crs means the CRS is unknown or undefined. The two cases must not be treated alike [19]."
+  },
+  {
+    "type": "paragraph",
+    "text": "Columnar organization lets a reader select the columns it needs. The file-level bbox and per-row covering.bbox can help skip irrelevant data; the effect also depends on spatial ordering, row groups, statistics and the reader. They do not guarantee a global spatial index. A compression codec such as ZSTD must also be stated, because size and time results are influenced by both structure and compression. Initialization costs can be significant for small files; the specification does not guarantee that GeoParquet always reads faster [19]."
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "From specifications to experimental design"
+  },
+  {
+    "type": "paragraph",
+    "text": "E1 tests shared boundaries and consistency; E2 measures the cost of storing and reading the complete dataset, with checks on preservation of geometry and attributes; E3 measures tiled data by viewport along with quantization error. This separation of tasks ties each conclusion to the amount of information supplied and the work actually measured."
+  }
+]

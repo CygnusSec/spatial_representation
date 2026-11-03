@@ -1,0 +1,87 @@
+[
+  {
+    "type": "heading",
+    "level": 1,
+    "text": "Appendix A Reproduction guide"
+  },
+  {
+    "type": "paragraph",
+    "text": "Extract the package Spatial_Representation_Sources_and_Data.zip. The experiments directory holds run_experiments.py, requirements.txt, README.md and the results of the run used in the report. No GIS service account is needed to run the synthetic dataset. Install the dependencies in a separate Python environment, then run from the experiments directory with the commands below."
+  },
+  {
+    "type": "code",
+    "caption": "Commands to rerun the experiments",
+    "lines": [
+      "python3 -m venv .venv",
+      "source .venv/bin/activate",
+      "python -m pip install -r requirements.txt",
+      "python run_experiments.py --output results_reproduced --repeats 5"
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "On Windows, use the corresponding activation command .venv\\Scripts\\activate. Do not overwrite the original results directory if comparison is intended. Geometry and configuration are generated deterministically; times may vary with the machine, library versions and system load. When reporting a new run, keep the environment.json file and the measurement rows of that run, rather than replacing only the summary figures in the tables."
+  },
+  {
+    "type": "paragraph",
+    "text": "The file e1_topology.json holds the four shared-boundary scenarios; e2_raw_timings.csv holds 75 write and read repetitions, and e3_raw_timings.csv holds 15 full-domain and viewport decoding repetitions. The e2_summary and e3_summary files come in both CSV and JSON. The results/data directory holds the actual files of each format and the PBF tiles. Detailed geometry checks and metadata fields are kept in JSON; CSV serves filtering and tabulation."
+  },
+  {
+    "type": "paragraph",
+    "text": "The code theory_examples.py in the root directory checks the three states of half-plane classification, the invariance under multiplying the coefficients by the same positive number, and the edge table of the two squares. The run accompanying the report achieved 60 invariance comparisons, obtaining 6 vertices, 7 edges, left face A and right face B on the shared edge; with the outer face, V − E + F equals 2. The files figures/draw_theory_figures.py and figures/draw_result_figures.py rebuild the diagrams and charts."
+  },
+  {
+    "type": "paragraph",
+    "text": "The sources directory stores the structured content, citation list and DOCX build program. The report's reference numbers are mapped in bibliography_report.json; these numbers should not be equated with the R codes of the previously downloaded reference PDF package. Rebuilding the DOCX/PDF requires additional publishing tools, separate from the GIS dependencies used to run the experiments."
+  },
+  {
+    "type": "heading",
+    "level": 1,
+    "text": "Appendix B Mapping to the evaluation criteria"
+  },
+  {
+    "type": "table",
+    "caption": "Table 12 Content addressing the provided evaluation framework",
+    "headers": [
+      "Criterion",
+      "Evidence in the report",
+      "Maximum points per the assignment"
+    ],
+    "rows": [
+      [
+        "Core theory",
+        "Section 3; three original figures; two pieces of pseudocode; correctness conditions and verified examples",
+        "3.0"
+      ],
+      [
+        "Updates and experiments",
+        "Sections 4–7; five formats; three experiments actually run; code and raw data",
+        "3.0"
+      ],
+      [
+        "Scientific structure",
+        "Abstract, research questions, related work, method, results, discussion, conclusion",
+        "2.0"
+      ],
+      [
+        "References",
+        "Original book, original papers and official specifications; numbered citations with DOI or URL",
+        "1.0"
+      ],
+      [
+        "Timeliness",
+        "Submission dates of the outline, report and revised version must be checked against the instructor's deadlines",
+        "1.0"
+      ]
+    ],
+    "widths": [
+      0.24,
+      0.59,
+      0.17
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "The mapping table only points to evidence and the assignment's maximum points; it does not self-grade or confirm on-time submission. Before submitting, the group must add member information according to the class template, check the page and deadline requirements, and rerun the experiments in the group's environment if the instructor requires direct evidence of installation and execution."
+  }
+]

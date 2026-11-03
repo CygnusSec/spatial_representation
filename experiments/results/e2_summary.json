@@ -1,0 +1,1097 @@
+[
+  {
+    "n": 100,
+    "profile": "GeoJSON",
+    "raw_bytes": 41485,
+    "gzip6_bytes": 5271,
+    "sha256": "9ad8198b71c533964434b012ea8ca9c1c696583480203ce2043155fee153f1fc",
+    "write_ms": {
+      "median": 2.978578,
+      "q1": 2.958739,
+      "q3": 3.264204,
+      "min": 2.942805,
+      "max": 3.519645
+    },
+    "read_ms": {
+      "median": 2.774296,
+      "q1": 2.609754,
+      "q3": 2.845592,
+      "min": 2.363962,
+      "max": 3.205492
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 100,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 100,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_00100.geojson"
+  },
+  {
+    "n": 100,
+    "profile": "TopoJSON",
+    "raw_bytes": 26648,
+    "gzip6_bytes": 4564,
+    "sha256": "ee94cbe9f214fb41e98f3ce2740d29635d33f600c47efaddd7ba86fea14d4b8e",
+    "arcs": 216,
+    "shared_arcs": 180,
+    "arc_references": 396,
+    "coordinate_pairs_in_arcs": 976,
+    "transform_present": false,
+    "write_ms": {
+      "median": 45.618522,
+      "q1": 43.093222,
+      "q3": 48.208135,
+      "min": 42.911315,
+      "max": 49.326222
+    },
+    "read_ms": {
+      "median": 2.211117,
+      "q1": 2.173792,
+      "q3": 2.230787,
+      "min": 2.128115,
+      "max": 2.51895
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 100,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 100,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 1.9709899877934459e-16,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_00100.topojson"
+  },
+  {
+    "n": 100,
+    "profile": "KML",
+    "raw_bytes": 61280,
+    "gzip6_bytes": 5696,
+    "sha256": "426c89609b3f9c9f062cc2bc070481b6869628f33e00eff0d4b6aa7e62e9593d",
+    "write_ms": {
+      "median": 4.423967,
+      "q1": 4.258233,
+      "q3": 4.429635,
+      "min": 4.049325,
+      "max": 4.843025
+    },
+    "read_ms": {
+      "median": 4.722607,
+      "q1": 4.659143,
+      "q3": 5.202554,
+      "min": 3.924261,
+      "max": 6.162658
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 100,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 100,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_00100.kml"
+  },
+  {
+    "n": 100,
+    "profile": "GeoParquet-NONE",
+    "raw_bytes": 38872,
+    "gzip6_bytes": 8710,
+    "sha256": "d9ee45be7d5692c2e647c2c41071957bd98cbba2550c2d56b47b08460492c4e2",
+    "geo_metadata": {
+      "primary_column": "geometry",
+      "columns": {
+        "geometry": {
+          "encoding": "WKB",
+          "crs": {
+            "$schema": "https://proj.org/schemas/v0.7/projjson.schema.json",
+            "type": "GeographicCRS",
+            "name": "WGS 84 (CRS84)",
+            "datum_ensemble": {
+              "name": "World Geodetic System 1984 ensemble",
+              "members": [
+                {
+                  "name": "World Geodetic System 1984 (Transit)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G730)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G873)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1150)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1674)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1762)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2139)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2296)"
+                }
+              ],
+              "ellipsoid": {
+                "name": "WGS 84",
+                "semi_major_axis": 6378137,
+                "inverse_flattening": 298.257223563
+              },
+              "accuracy": "2.0",
+              "id": {
+                "authority": "EPSG",
+                "code": 6326
+              }
+            },
+            "coordinate_system": {
+              "subtype": "ellipsoidal",
+              "axis": [
+                {
+                  "name": "Geodetic longitude",
+                  "abbreviation": "Lon",
+                  "direction": "east",
+                  "unit": "degree"
+                },
+                {
+                  "name": "Geodetic latitude",
+                  "abbreviation": "Lat",
+                  "direction": "north",
+                  "unit": "degree"
+                }
+              ]
+            },
+            "scope": "Not known.",
+            "area": "World.",
+            "bbox": {
+              "south_latitude": -90,
+              "west_longitude": -180,
+              "north_latitude": 90,
+              "east_longitude": 180
+            },
+            "id": {
+              "authority": "OGC",
+              "code": "CRS84"
+            }
+          },
+          "geometry_types": [
+            "Polygon"
+          ],
+          "bbox": [
+            105.75,
+            20.95,
+            105.87,
+            21.07
+          ]
+        }
+      },
+      "version": "1.1.0",
+      "creator": {
+        "library": "geopandas",
+        "version": "1.2.0"
+      }
+    },
+    "write_ms": {
+      "median": 4.896373,
+      "q1": 4.690549,
+      "q3": 5.123918,
+      "min": 4.131718,
+      "max": 5.363831
+    },
+    "read_ms": {
+      "median": 33.959633,
+      "q1": 33.308463,
+      "q3": 34.786403,
+      "min": 30.89397,
+      "max": 36.706321
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 100,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 100,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_00100_none.parquet"
+  },
+  {
+    "n": 100,
+    "profile": "GeoParquet-ZSTD",
+    "raw_bytes": 12961,
+    "gzip6_bytes": 7138,
+    "sha256": "70eafa57abae62c4edef96e2c0f8aa650031cf1a66bb35402db4496832457d9f",
+    "geo_metadata": {
+      "primary_column": "geometry",
+      "columns": {
+        "geometry": {
+          "encoding": "WKB",
+          "crs": {
+            "$schema": "https://proj.org/schemas/v0.7/projjson.schema.json",
+            "type": "GeographicCRS",
+            "name": "WGS 84 (CRS84)",
+            "datum_ensemble": {
+              "name": "World Geodetic System 1984 ensemble",
+              "members": [
+                {
+                  "name": "World Geodetic System 1984 (Transit)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G730)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G873)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1150)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1674)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1762)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2139)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2296)"
+                }
+              ],
+              "ellipsoid": {
+                "name": "WGS 84",
+                "semi_major_axis": 6378137,
+                "inverse_flattening": 298.257223563
+              },
+              "accuracy": "2.0",
+              "id": {
+                "authority": "EPSG",
+                "code": 6326
+              }
+            },
+            "coordinate_system": {
+              "subtype": "ellipsoidal",
+              "axis": [
+                {
+                  "name": "Geodetic longitude",
+                  "abbreviation": "Lon",
+                  "direction": "east",
+                  "unit": "degree"
+                },
+                {
+                  "name": "Geodetic latitude",
+                  "abbreviation": "Lat",
+                  "direction": "north",
+                  "unit": "degree"
+                }
+              ]
+            },
+            "scope": "Not known.",
+            "area": "World.",
+            "bbox": {
+              "south_latitude": -90,
+              "west_longitude": -180,
+              "north_latitude": 90,
+              "east_longitude": 180
+            },
+            "id": {
+              "authority": "OGC",
+              "code": "CRS84"
+            }
+          },
+          "geometry_types": [
+            "Polygon"
+          ],
+          "bbox": [
+            105.75,
+            20.95,
+            105.87,
+            21.07
+          ]
+        }
+      },
+      "version": "1.1.0",
+      "creator": {
+        "library": "geopandas",
+        "version": "1.2.0"
+      }
+    },
+    "write_ms": {
+      "median": 4.964725,
+      "q1": 4.425529,
+      "q3": 5.13211,
+      "min": 4.265634,
+      "max": 5.520432
+    },
+    "read_ms": {
+      "median": 35.265349,
+      "q1": 33.695198,
+      "q3": 35.787129,
+      "min": 28.060025,
+      "max": 38.554114
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 100,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 100,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_00100_zstd.parquet"
+  },
+  {
+    "n": 1000,
+    "profile": "GeoJSON",
+    "raw_bytes": 445277,
+    "gzip6_bytes": 51199,
+    "sha256": "1c97f4290cd9e841eb9608e0a57edfc7eb35d9bb7d16abc3656827c813ab9bde",
+    "write_ms": {
+      "median": 25.199902,
+      "q1": 24.204656,
+      "q3": 25.562767,
+      "min": 22.769081,
+      "max": 28.80329
+    },
+    "read_ms": {
+      "median": 23.057606,
+      "q1": 22.593082,
+      "q3": 28.215073,
+      "min": 20.395114,
+      "max": 29.674884
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 1000,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 1000,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_01000.geojson"
+  },
+  {
+    "n": 1000,
+    "profile": "TopoJSON",
+    "raw_bytes": 289716,
+    "gzip6_bytes": 45499,
+    "sha256": "f8a43c52537e3a736a851e1fdbb8fe60e70bb16f21b74cac34d88f68252dfe8f",
+    "arcs": 2061,
+    "shared_arcs": 1935,
+    "arc_references": 3996,
+    "coordinate_pairs_in_arcs": 9931,
+    "transform_present": false,
+    "write_ms": {
+      "median": 402.305213,
+      "q1": 402.182031,
+      "q3": 405.999857,
+      "min": 368.392347,
+      "max": 424.498576
+    },
+    "read_ms": {
+      "median": 20.280425,
+      "q1": 19.812876,
+      "q3": 21.217486,
+      "min": 18.507073,
+      "max": 21.458931
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 1000,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 1000,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 2.2515495673942904e-16,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_01000.topojson"
+  },
+  {
+    "n": 1000,
+    "profile": "KML",
+    "raw_bytes": 641472,
+    "gzip6_bytes": 52876,
+    "sha256": "6e907078fcac003a3d60742939fdf4c45abc04add8c397885a5c70a7821916f2",
+    "write_ms": {
+      "median": 40.848684,
+      "q1": 40.41177,
+      "q3": 41.944007,
+      "min": 39.258481,
+      "max": 42.229508
+    },
+    "read_ms": {
+      "median": 39.441201,
+      "q1": 39.256608,
+      "q3": 39.55704,
+      "min": 38.185641,
+      "max": 40.944875
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 1000,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 1000,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_01000.kml"
+  },
+  {
+    "n": 1000,
+    "profile": "GeoParquet-NONE",
+    "raw_bytes": 308836,
+    "gzip6_bytes": 52385,
+    "sha256": "0f3f85a7d4f4e6192656f00b87ac2458d5f2050e6f6fed1172d39553ccf3bb4a",
+    "geo_metadata": {
+      "primary_column": "geometry",
+      "columns": {
+        "geometry": {
+          "encoding": "WKB",
+          "crs": {
+            "$schema": "https://proj.org/schemas/v0.7/projjson.schema.json",
+            "type": "GeographicCRS",
+            "name": "WGS 84 (CRS84)",
+            "datum_ensemble": {
+              "name": "World Geodetic System 1984 ensemble",
+              "members": [
+                {
+                  "name": "World Geodetic System 1984 (Transit)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G730)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G873)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1150)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1674)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1762)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2139)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2296)"
+                }
+              ],
+              "ellipsoid": {
+                "name": "WGS 84",
+                "semi_major_axis": 6378137,
+                "inverse_flattening": 298.257223563
+              },
+              "accuracy": "2.0",
+              "id": {
+                "authority": "EPSG",
+                "code": 6326
+              }
+            },
+            "coordinate_system": {
+              "subtype": "ellipsoidal",
+              "axis": [
+                {
+                  "name": "Geodetic longitude",
+                  "abbreviation": "Lon",
+                  "direction": "east",
+                  "unit": "degree"
+                },
+                {
+                  "name": "Geodetic latitude",
+                  "abbreviation": "Lat",
+                  "direction": "north",
+                  "unit": "degree"
+                }
+              ]
+            },
+            "scope": "Not known.",
+            "area": "World.",
+            "bbox": {
+              "south_latitude": -90,
+              "west_longitude": -180,
+              "north_latitude": 90,
+              "east_longitude": 180
+            },
+            "id": {
+              "authority": "OGC",
+              "code": "CRS84"
+            }
+          },
+          "geometry_types": [
+            "Polygon"
+          ],
+          "bbox": [
+            105.75,
+            20.95,
+            105.87,
+            21.07
+          ]
+        }
+      },
+      "version": "1.1.0",
+      "creator": {
+        "library": "geopandas",
+        "version": "1.2.0"
+      }
+    },
+    "write_ms": {
+      "median": 6.472174,
+      "q1": 6.046567,
+      "q3": 6.711217,
+      "min": 5.768667,
+      "max": 9.136109
+    },
+    "read_ms": {
+      "median": 29.459537,
+      "q1": 28.897418,
+      "q3": 33.781503,
+      "min": 28.187563,
+      "max": 34.073884
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 1000,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 1000,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_01000_none.parquet"
+  },
+  {
+    "n": 1000,
+    "profile": "GeoParquet-ZSTD",
+    "raw_bytes": 50115,
+    "gzip6_bytes": 28670,
+    "sha256": "b9f02a6f656e11871eba0636596158b6bb3fc4fcdd923231f75a1316c7cd5068",
+    "geo_metadata": {
+      "primary_column": "geometry",
+      "columns": {
+        "geometry": {
+          "encoding": "WKB",
+          "crs": {
+            "$schema": "https://proj.org/schemas/v0.7/projjson.schema.json",
+            "type": "GeographicCRS",
+            "name": "WGS 84 (CRS84)",
+            "datum_ensemble": {
+              "name": "World Geodetic System 1984 ensemble",
+              "members": [
+                {
+                  "name": "World Geodetic System 1984 (Transit)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G730)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G873)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1150)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1674)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1762)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2139)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2296)"
+                }
+              ],
+              "ellipsoid": {
+                "name": "WGS 84",
+                "semi_major_axis": 6378137,
+                "inverse_flattening": 298.257223563
+              },
+              "accuracy": "2.0",
+              "id": {
+                "authority": "EPSG",
+                "code": 6326
+              }
+            },
+            "coordinate_system": {
+              "subtype": "ellipsoidal",
+              "axis": [
+                {
+                  "name": "Geodetic longitude",
+                  "abbreviation": "Lon",
+                  "direction": "east",
+                  "unit": "degree"
+                },
+                {
+                  "name": "Geodetic latitude",
+                  "abbreviation": "Lat",
+                  "direction": "north",
+                  "unit": "degree"
+                }
+              ]
+            },
+            "scope": "Not known.",
+            "area": "World.",
+            "bbox": {
+              "south_latitude": -90,
+              "west_longitude": -180,
+              "north_latitude": 90,
+              "east_longitude": 180
+            },
+            "id": {
+              "authority": "OGC",
+              "code": "CRS84"
+            }
+          },
+          "geometry_types": [
+            "Polygon"
+          ],
+          "bbox": [
+            105.75,
+            20.95,
+            105.87,
+            21.07
+          ]
+        }
+      },
+      "version": "1.1.0",
+      "creator": {
+        "library": "geopandas",
+        "version": "1.2.0"
+      }
+    },
+    "write_ms": {
+      "median": 8.481904,
+      "q1": 8.214301,
+      "q3": 8.490948,
+      "min": 7.128531,
+      "max": 8.50575
+    },
+    "read_ms": {
+      "median": 32.624248,
+      "q1": 31.760807,
+      "q3": 36.354944,
+      "min": 31.651256,
+      "max": 36.567558
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 1000,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 1000,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_01000_zstd.parquet"
+  },
+  {
+    "n": 10000,
+    "profile": "GeoJSON",
+    "raw_bytes": 4551029,
+    "gzip6_bytes": 538339,
+    "sha256": "5c8932110b3079c51002e6a31a809fa2fe893b11e603ada83f0f7d4ffc02ffcb",
+    "write_ms": {
+      "median": 321.824578,
+      "q1": 311.6824,
+      "q3": 387.403611,
+      "min": 301.197362,
+      "max": 415.865124
+    },
+    "read_ms": {
+      "median": 323.879356,
+      "q1": 298.861562,
+      "q3": 326.170829,
+      "min": 272.10828,
+      "max": 362.195652
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 10000,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 10000,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_10000.geojson"
+  },
+  {
+    "n": 10000,
+    "profile": "TopoJSON",
+    "raw_bytes": 3017111,
+    "gzip6_bytes": 439887,
+    "sha256": "ed3fa9990892fe29f73643873c38c1e781c9bd6c4a017375b177b4635b8c32d8",
+    "arcs": 20196,
+    "shared_arcs": 19800,
+    "arc_references": 39996,
+    "coordinate_pairs_in_arcs": 99796,
+    "transform_present": false,
+    "write_ms": {
+      "median": 5313.076448,
+      "q1": 5086.193856,
+      "q3": 6410.770645,
+      "min": 4883.088255,
+      "max": 6506.62082
+    },
+    "read_ms": {
+      "median": 371.29723,
+      "q1": 368.036773,
+      "q3": 425.633683,
+      "min": 345.476559,
+      "max": 452.315402
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 10000,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 10000,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 1.5398359279578967e-16,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_10000.topojson"
+  },
+  {
+    "n": 10000,
+    "profile": "KML",
+    "raw_bytes": 6511224,
+    "gzip6_bytes": 546117,
+    "sha256": "3f360913fd5b64fefaebc32372f47250b355fff02f906de7a624900a2a70980d",
+    "write_ms": {
+      "median": 503.612537,
+      "q1": 489.318292,
+      "q3": 519.278867,
+      "min": 425.078345,
+      "max": 606.25451
+    },
+    "read_ms": {
+      "median": 525.339695,
+      "q1": 480.217374,
+      "q3": 597.012033,
+      "min": 437.724043,
+      "max": 617.8157
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 10000,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 10000,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_10000.kml"
+  },
+  {
+    "n": 10000,
+    "profile": "GeoParquet-NONE",
+    "raw_bytes": 3023469,
+    "gzip6_bytes": 536556,
+    "sha256": "e517ab51c944b9668672c2d80b1caa8a511a4b1ece0fbbfac60f2be511957c60",
+    "geo_metadata": {
+      "primary_column": "geometry",
+      "columns": {
+        "geometry": {
+          "encoding": "WKB",
+          "crs": {
+            "$schema": "https://proj.org/schemas/v0.7/projjson.schema.json",
+            "type": "GeographicCRS",
+            "name": "WGS 84 (CRS84)",
+            "datum_ensemble": {
+              "name": "World Geodetic System 1984 ensemble",
+              "members": [
+                {
+                  "name": "World Geodetic System 1984 (Transit)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G730)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G873)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1150)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1674)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1762)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2139)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2296)"
+                }
+              ],
+              "ellipsoid": {
+                "name": "WGS 84",
+                "semi_major_axis": 6378137,
+                "inverse_flattening": 298.257223563
+              },
+              "accuracy": "2.0",
+              "id": {
+                "authority": "EPSG",
+                "code": 6326
+              }
+            },
+            "coordinate_system": {
+              "subtype": "ellipsoidal",
+              "axis": [
+                {
+                  "name": "Geodetic longitude",
+                  "abbreviation": "Lon",
+                  "direction": "east",
+                  "unit": "degree"
+                },
+                {
+                  "name": "Geodetic latitude",
+                  "abbreviation": "Lat",
+                  "direction": "north",
+                  "unit": "degree"
+                }
+              ]
+            },
+            "scope": "Not known.",
+            "area": "World.",
+            "bbox": {
+              "south_latitude": -90,
+              "west_longitude": -180,
+              "north_latitude": 90,
+              "east_longitude": 180
+            },
+            "id": {
+              "authority": "OGC",
+              "code": "CRS84"
+            }
+          },
+          "geometry_types": [
+            "Polygon"
+          ],
+          "bbox": [
+            105.75,
+            20.95,
+            105.87,
+            21.07
+          ]
+        }
+      },
+      "version": "1.1.0",
+      "creator": {
+        "library": "geopandas",
+        "version": "1.2.0"
+      }
+    },
+    "write_ms": {
+      "median": 30.604968,
+      "q1": 26.22854,
+      "q3": 32.295624,
+      "min": 23.148748,
+      "max": 34.821894
+    },
+    "read_ms": {
+      "median": 55.122614,
+      "q1": 54.856377,
+      "q3": 65.987837,
+      "min": 54.293683,
+      "max": 88.001248
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 10000,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 10000,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_10000_none.parquet"
+  },
+  {
+    "n": 10000,
+    "profile": "GeoParquet-ZSTD",
+    "raw_bytes": 452131,
+    "gzip6_bytes": 253110,
+    "sha256": "5ac22205c4214b88d376e5347ea85c69cf6f3cf908757b11a365a6e50d17153b",
+    "geo_metadata": {
+      "primary_column": "geometry",
+      "columns": {
+        "geometry": {
+          "encoding": "WKB",
+          "crs": {
+            "$schema": "https://proj.org/schemas/v0.7/projjson.schema.json",
+            "type": "GeographicCRS",
+            "name": "WGS 84 (CRS84)",
+            "datum_ensemble": {
+              "name": "World Geodetic System 1984 ensemble",
+              "members": [
+                {
+                  "name": "World Geodetic System 1984 (Transit)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G730)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G873)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1150)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1674)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G1762)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2139)"
+                },
+                {
+                  "name": "World Geodetic System 1984 (G2296)"
+                }
+              ],
+              "ellipsoid": {
+                "name": "WGS 84",
+                "semi_major_axis": 6378137,
+                "inverse_flattening": 298.257223563
+              },
+              "accuracy": "2.0",
+              "id": {
+                "authority": "EPSG",
+                "code": 6326
+              }
+            },
+            "coordinate_system": {
+              "subtype": "ellipsoidal",
+              "axis": [
+                {
+                  "name": "Geodetic longitude",
+                  "abbreviation": "Lon",
+                  "direction": "east",
+                  "unit": "degree"
+                },
+                {
+                  "name": "Geodetic latitude",
+                  "abbreviation": "Lat",
+                  "direction": "north",
+                  "unit": "degree"
+                }
+              ]
+            },
+            "scope": "Not known.",
+            "area": "World.",
+            "bbox": {
+              "south_latitude": -90,
+              "west_longitude": -180,
+              "north_latitude": 90,
+              "east_longitude": 180
+            },
+            "id": {
+              "authority": "OGC",
+              "code": "CRS84"
+            }
+          },
+          "geometry_types": [
+            "Polygon"
+          ],
+          "bbox": [
+            105.75,
+            20.95,
+            105.87,
+            21.07
+          ]
+        }
+      },
+      "version": "1.1.0",
+      "creator": {
+        "library": "geopandas",
+        "version": "1.2.0"
+      }
+    },
+    "write_ms": {
+      "median": 32.108335,
+      "q1": 31.719702,
+      "q3": 39.108134,
+      "min": 29.464692,
+      "max": 42.283868
+    },
+    "read_ms": {
+      "median": 50.760579,
+      "q1": 49.235212,
+      "q3": 58.349267,
+      "min": 41.708155,
+      "max": 73.203977
+    },
+    "validation": {
+      "passed": true,
+      "feature_count": 10000,
+      "unique_ids": true,
+      "same_ids": true,
+      "attributes_equal": true,
+      "all_valid_nonempty": true,
+      "topologically_equal_count": 10000,
+      "max_hausdorff_degrees": 0.0,
+      "max_relative_area_error": 0.0,
+      "geometric_tolerance_degrees": 1e-12
+    },
+    "relative_path": "data/e2/cells_10000_zstd.parquet"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "logical_cpus_os": 9,
+  "affinity_cpus": 9,
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "shapely": "2.2.0",
+    "pyarrow": "26.0.0",
+    "pyproj": "3.8.0",
+    "topojson": "2.2",
+    "mapbox-vector-tile": "2.2.0",
+    "geopandas": "1.2.0",
+    "lxml": "6.1.1",
+    "protobuf": "6.33.6",
+    "pyclipper": "1.4.0",
+    "pyogrio": "0.13.0"
+  },
+  "geos": "3.14.1",
+  "proj": "9.8.1",
+  "cpu_max": "800000 100000",
+  "memory_max": "8589934592",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "seed": 20261102,
+  "started_utc": "2026-11-02T17:05:28.748982+00:00",
+  "repeats": 5,
+  "timing": "perf_counter_ns; warm OS file cache; no fsync; gc.collect outside timed interval",
+  "geometry_precision": "12 decimal place input coordinates; TopoJSON quantization and simplification disabled",
+  "common_target": "list of id int, class int, and materialized Shapely Polygon objects",
+  "limitations": [
+    "Synthetic polygon coverage with shared zigzag edges and straight outer boundary, not real-world mixed geometry.",
+    "Serialization/reader implementations differ; timings are pipeline measurements, not inherent format speed.",
+    "GeoParquet-NONE and GeoParquet-ZSTD are separate codec configurations; gzip6 is a separate file-size experiment.",
+    "No cold-cache disk bandwidth, process memory, network, browser rendering or nationwide datasets measured.",
+    "MVT results intentionally involve clipping and quantization, and are not lossless full-dataset counterparts."
+  ],
+  "finished_utc": "2026-11-02T17:07:13.542953+00:00",
+  "hausdorff_method": "Discrete GEOS/Shapely hausdorff_distance without densify; E2 also checks topological equality."
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "case": "exact_shared_boundary",
+    "input_metrics": {
+      "touches": true,
+      "distance_utm_m": 0.0,
+      "overlap_area_utm_m2": 0.0,
+      "shared_boundary_length_utm_m": 1106.8134119435542,
+      "all_valid": true
+    },
+    "decoded_metrics": {
+      "touches": true,
+      "distance_utm_m": 0.0,
+      "overlap_area_utm_m2": 0.0,
+      "shared_boundary_length_utm_m": 1106.813411943352,
+      "all_valid": true
+    },
+    "topology": {
+      "arcs": 3,
+      "shared_arcs": 1,
+      "arc_references": 4,
+      "coordinate_pairs_in_arcs": 10,
+      "transform_present": false
+    },
+    "input_geojson_coordinate_pairs": 34
+  },
+  {
+    "case": "gap_1e-6_degree",
+    "input_metrics": {
+      "touches": false,
+      "distance_utm_m": 0.10392990274261335,
+      "overlap_area_utm_m2": 0.0,
+      "shared_boundary_length_utm_m": 0.0,
+      "all_valid": true
+    },
+    "decoded_metrics": {
+      "touches": false,
+      "distance_utm_m": 0.10392990274255694,
+      "overlap_area_utm_m2": 0.0,
+      "shared_boundary_length_utm_m": 0.0,
+      "all_valid": true
+    },
+    "topology": {
+      "arcs": 2,
+      "shared_arcs": 0,
+      "arc_references": 2,
+      "coordinate_pairs_in_arcs": 10,
+      "transform_present": false
+    },
+    "input_geojson_coordinate_pairs": 34
+  },
+  {
+    "case": "independent_geojson_edit_plus_1e-4_degree",
+    "decoded_metrics": {
+      "touches": false,
+      "distance_utm_m": 0.0,
+      "overlap_area_utm_m2": 2875.871136328689,
+      "shared_boundary_length_utm_m": 553.4067059799958,
+      "all_valid": true
+    }
+  },
+  {
+    "case": "shared_topojson_edit_plus_1e-4_degree",
+    "decoded_metrics": {
+      "touches": true,
+      "distance_utm_m": 0.0,
+      "overlap_area_utm_m2": 0.0,
+      "shared_boundary_length_utm_m": 1107.2036671661554,
+      "all_valid": true
+    },
+    "topology": {
+      "arcs": 3,
+      "shared_arcs": 1,
+      "arc_references": 4,
+      "coordinate_pairs_in_arcs": 13,
+      "transform_present": false
+    }
+  }
+]

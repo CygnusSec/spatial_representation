@@ -1,0 +1,298 @@
+{
+  "status": "all assertions passed",
+  "coordinates": "dimensionless synthetic examples",
+  "halfplanes": {
+    "constraints_ax_by_c_le_0": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0,
+        -2.0
+      ]
+    ],
+    "epsilon_exact_example": 0,
+    "classifications": [
+      {
+        "id": "P",
+        "point": [
+          0.5,
+          0.5
+        ],
+        "classification": "INSIDE"
+      },
+      {
+        "id": "Q",
+        "point": [
+          1.0,
+          1.0
+        ],
+        "classification": "BOUNDARY"
+      },
+      {
+        "id": "R",
+        "point": [
+          1.5,
+          1.0
+        ],
+        "classification": "OUTSIDE"
+      }
+    ],
+    "rescaling_checks_passed": 60,
+    "rescaling_epsilon": 1e-08,
+    "positive_scales": [
+      1e-09,
+      0.001,
+      1.0,
+      17.0,
+      1000000000.0
+    ],
+    "boundary_band_example": {
+      "point": [
+        1.000000001,
+        1
+      ],
+      "epsilon_0": "OUTSIDE",
+      "epsilon_1e_minus_8": "BOUNDARY"
+    }
+  },
+  "shared_edges": {
+    "exterior_assignment": "OUTER is assigned only for the verified two-square example; the general function leaves unassigned sides as None.",
+    "input_boundary_segment_occurrences": 8,
+    "unique_vertices": 6,
+    "unique_edges": 7,
+    "faces_including_exterior": 3,
+    "euler_V_minus_E_plus_F": 2,
+    "common_edge": {
+      "start": [
+        1,
+        0
+      ],
+      "end": [
+        1,
+        1
+      ],
+      "left": "A",
+      "right": "B"
+    },
+    "all_edges": [
+      {
+        "start": [
+          0,
+          0
+        ],
+        "end": [
+          0,
+          1
+        ],
+        "left": "OUTER",
+        "right": "A"
+      },
+      {
+        "start": [
+          0,
+          0
+        ],
+        "end": [
+          1,
+          0
+        ],
+        "left": "A",
+        "right": "OUTER"
+      },
+      {
+        "start": [
+          0,
+          1
+        ],
+        "end": [
+          1,
+          1
+        ],
+        "left": "OUTER",
+        "right": "A"
+      },
+      {
+        "start": [
+          1,
+          0
+        ],
+        "end": [
+          1,
+          1
+        ],
+        "left": "A",
+        "right": "B"
+      },
+      {
+        "start": [
+          1,
+          0
+        ],
+        "end": [
+          2,
+          0
+        ],
+        "left": "B",
+        "right": "OUTER"
+      },
+      {
+        "start": [
+          1,
+          1
+        ],
+        "end": [
+          2,
+          1
+        ],
+        "left": "OUTER",
+        "right": "B"
+      },
+      {
+        "start": [
+          2,
+          0
+        ],
+        "end": [
+          2,
+          1
+        ],
+        "left": "B",
+        "right": "OUTER"
+      }
+    ],
+    "face_ring_references": {
+      "A": [
+        [
+          {
+            "edge": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "orientation": 1
+          },
+          {
+            "edge": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "orientation": 1
+          },
+          {
+            "edge": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "orientation": -1
+          },
+          {
+            "edge": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "orientation": -1
+          }
+        ]
+      ],
+      "B": [
+        [
+          {
+            "edge": [
+              [
+                1,
+                0
+              ],
+              [
+                2,
+                0
+              ]
+            ],
+            "orientation": 1
+          },
+          {
+            "edge": [
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "orientation": 1
+          },
+          {
+            "edge": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "orientation": -1
+          },
+          {
+            "edge": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "orientation": -1
+          }
+        ]
+      ]
+    }
+  },
+  "union_counterexample": {
+    "point": [
+      0.5,
+      1
+    ],
+    "C1": "BOUNDARY",
+    "C2": "BOUNDARY",
+    "union": "INSIDE",
+    "reason": "A small disk around (0.5,1) is contained in the union of the two rectangles."
+  },
+  "scope": "No input repair, automatic noding, general validity test, or complete DCEL construction."
+}

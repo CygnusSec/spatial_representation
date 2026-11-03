@@ -1,0 +1,27 @@
+[
+  {
+    "type": "title",
+    "text": "Representation of Spatial Objects"
+  },
+  {
+    "type": "subtitle",
+    "text": "A scientific report on the theoretical foundations and an experimental study of modern formats"
+  },
+  {
+    "type": "metadata",
+    "text": "Spatial Databases  |  Group 1  |  Chapter 2  |  November 2, 2026"
+  },
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Abstract"
+  },
+  {
+    "type": "paragraph",
+    "text": "This report systematizes how spatial objects are represented, from entity and field models to raster, vector, half-planes, and spaghetti, network and topological structures. The main theoretical source is Chapter 2 “Representation of Spatial Objects” (pp. 29–67) of the book Spatial Databases: With Application to GIS by Rigaux, Scholl and Voisard (2002), checked against original works, TIGER/Line and the GeoJSON, TopoJSON, KML, Vector Tiles and GeoParquet specifications. Three experiments were run on synthetic data: shared boundaries and updates; complete processing of 100–10,000 polygons; and MVT delivery by zoom level. At 10,000 polygons, TopoJSON reduces file size by 33.70% compared with GeoJSON but has a higher build cost. GeoParquet ZSTD reads faster than GeoJSON at this scale, while the order reverses at 100 objects. MVT reduces the data needed for a viewport as zoom increases, while exhibiting measured quantization error. The results show that the choice must be tied to the information to be preserved, the scale and the task. The measurements are descriptive statistics of the published pipelines, not a universal ranking of formats. Code, data and per-repetition results are provided for reproduction."
+  },
+  {
+    "type": "keywords",
+    "text": "Keywords  spatial representation; entity and field models; topology; GeoJSON; TopoJSON; KML; vector tiles; GeoParquet."
+  }
+]
