@@ -294,5 +294,127 @@
     "union": "INSIDE",
     "reason": "A small disk around (0.5,1) is contained in the union of the two rectangles."
   },
+  "network": {
+    "example": "Illustrative two roads crossing at (1, 1); not taken from the book.",
+    "segments_cross_in_projection": true,
+    "nonplanar_arcs": [
+      "overpass",
+      "road"
+    ],
+    "nonplanar_path_S_to_E": null,
+    "planar_arcs": [
+      "SX",
+      "WX",
+      "XE",
+      "XN"
+    ],
+    "planar_path_S_to_E": [
+      "S",
+      "X",
+      "E"
+    ],
+    "planar_length": 2.0
+  },
+  "tiger_line": {
+    "chain_from_book_tables_2_1_to_2_3": {
+      "tlid": 8086,
+      "start": [
+        -72156546,
+        41957498
+      ],
+      "end": [
+        -72161936,
+        41958117
+      ],
+      "shape_points": [
+        [
+          -72156638,
+          41957658
+        ],
+        [
+          -72157985,
+          41958184
+        ],
+        [
+          -72161599,
+          41958117
+        ]
+      ],
+      "left": [
+        "PO123",
+        1
+      ],
+      "right": [
+        "PO1987",
+        1
+      ]
+    },
+    "shape_points_elided_in_table_2_2": 8,
+    "chain_8087_without_shape_or_link_records": {
+      "tlid": 8087,
+      "start": [
+        -72197129,
+        41957206
+      ],
+      "end": [
+        -72197197,
+        41957669
+      ],
+      "shape_points": [],
+      "left": null,
+      "right": null
+    },
+    "figure_2_14": {
+      "direction_of_arcs_other_than_f": "Chosen for this example; the book only fixes arc f.",
+      "ring_P1": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "ring_P2": [
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "area_P1": 2.0,
+      "area_P2": 8.5,
+      "area_polygon_P_of_figure_2_6": 10.5,
+      "polygons_adjacent_to_P1": [
+        "OUTER",
+        "P2"
+      ],
+      "euler_V_minus_E_plus_F": 2
+    }
+  },
   "scope": "No input repair, automatic noding, general validity test, or complete DCEL construction."
 }

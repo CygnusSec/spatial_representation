@@ -60,8 +60,9 @@ metadata of the new run; times are not expected to match exactly.
 | `experiments/results/e3_summary.csv` | MVT summary table. |
 | `experiments/results/e3_configuration.json` | CRS, extent, zoom, viewport. |
 | `experiments/results/data` | Actual GeoJSON, TopoJSON, KML, GeoParquet and PBF tile files. |
-| `theory_examples.py` | Examples of the two algorithms, using only the Python standard library. |
+| `theory_examples.py` | Half-plane, shared-edge, network and TIGER/Line examples, using only the Python standard library. |
 | `theory_examples_results.json` | Verification results that were run. |
+| `demo/e1_compare.html` | Self-contained page comparing the four E1 scenarios; open it in a browser. |
 | `sources/bibliography_report.json` | Mapping of numbers [1]–[22] to the R source codes. |
 
 ## 4. Rebuilding the figures
@@ -81,6 +82,15 @@ Without Docker, use a second virtual environment:
 
 The results script reads the saved tables and does not rerun the benchmark. PNG files
 are 300 dpi; SVG files keep vector figures for resizing or use in slides.
+
+To rebuild the E1 demo page from a stored result set:
+
+    docker compose run --rm publish python demo/build_e1_demo.py --results experiments/results_group
+
+The TIGER/Line example joins chain 8086 as printed in Tables 2.1-2.3 of the book, where
+8 of its shape points are elided, and rebuilds polygon rings from Figure 2.14. The
+direction of arcs other than `f` is chosen for the example. The network example is
+illustrative and does not come from the book.
 
 ## 5. Rebuilding the Word document and exporting a PDF
 

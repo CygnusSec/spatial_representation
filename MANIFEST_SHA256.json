@@ -8,13 +8,28 @@
     },
     {
       "path": "README.md",
-      "bytes": 7423,
-      "sha256": "34072f0185c03e27b92309d2e60ca7842e306ce51ab054ba835b6ee58bac1181"
+      "bytes": 8011,
+      "sha256": "29547542c0c7a4d6b2c826355536d8d1c5a703a1972cda3fa0ca85b8a717d9bd"
+    },
+    {
+      "path": "REPORT_REVISIONS.md",
+      "bytes": 18631,
+      "sha256": "5191c1c9ef6942501ea4fe74bd64d98c83809e0c07bbccfe73d58ae9e6b06b59"
     },
     {
       "path": "build_report_docx.py",
       "bytes": 11947,
       "sha256": "4d2ebb26bf8f287fdc95a5a2bd27ae0f4c13cf69b3ce7ad62e42ef552b9d8775"
+    },
+    {
+      "path": "demo/build_e1_demo.py",
+      "bytes": 5896,
+      "sha256": "89da58b4a16f9aa1f7b49fc1116b12cbe6d90d488efcb5ff44dd176da6a6d301"
+    },
+    {
+      "path": "demo/e1_compare.html",
+      "bytes": 9249,
+      "sha256": "424d581e1a7af4fb451213c329f399e8d1d32655efece1030e3200b0ed21e829"
     },
     {
       "path": "docker-compose.yml",
@@ -2167,6 +2182,11 @@
       "sha256": "177453235da2f1a1fbdabe98f12a8d496a44aa1e5bdc59bf30c7f38c80f83425"
     },
     {
+      "path": "figures/draw_figures.py",
+      "bytes": 17109,
+      "sha256": "d1f20fcfc0f3fa1b3932815846a6f4d103153b95e22301d9056452b63b65947b"
+    },
+    {
       "path": "figures/draw_result_figures.py",
       "bytes": 11697,
       "sha256": "aa9f17ef820940f060f5a4f42bc2a051d51bf5dc3e5376c8b645f2dc3a213682"
@@ -2293,13 +2313,13 @@
     },
     {
       "path": "theory_examples.py",
-      "bytes": 7771,
-      "sha256": "3fe9c78b66d20798b1170f9776127359c59feaf9759bbc3af22e21b8b7e69e77"
+      "bytes": 15910,
+      "sha256": "9bc7ec1a91feabb22b9993bbd69b5bd9599c00b8098e53c6f77f02f078a69924"
     },
     {
       "path": "theory_examples_results.json",
-      "bytes": 5115,
-      "sha256": "ecb25bd0dee0894f6da73bb1f8db30521344068d87df2905e0fbed51ed34d047"
+      "bytes": 7156,
+      "sha256": "e7774142fc23e0466125cbadb28694d36e9fe4b93946c9a0ef6b1e8144b255d2"
     }
   ]
 }

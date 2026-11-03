@@ -65,6 +65,10 @@ jobs:
         run: docker compose run --rm -T publish python theory_examples.py
       - name: Check that stored theory results are current
         run: git diff --exit-code -- theory_examples_results.json
+      - name: Rebuild the E1 demo page
+        run: docker compose run --rm -T publish python demo/build_e1_demo.py
+      - name: Check that the stored demo page is current
+        run: git diff --exit-code -- demo/e1_compare.html
       - name: Draw figures
         run: |
           docker compose run --rm -T publish sh -euc '
