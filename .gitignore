@@ -1,0 +1,28 @@
+# Built report (produced by CI as an artifact)
+Spatial_Object_Representation_Report.docx
+Spatial_Object_Representation_Report.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local experiment runs (the reported results stay tracked)
+experiments/results_reproduced/
+experiments/quick_check/
+
+# Interrupted packaging and local backups
+*.zip.part
+.backup*/
+
+# LibreOffice and Word lock files
+.~lock.*
+~$*
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

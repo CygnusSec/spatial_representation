@@ -11,8 +11,8 @@ services:
       context: .
       target: experiments
     image: spatial-representation/experiments:1.0
-    # Same limits as the original run (8 CPUs, 8 GiB) to ease comparison.
-    cpus: 8
+    # Same limits as the original run (8 CPUs, 8 GiB) to ease comparison; CI lowers the CPU limit.
+    cpus: ${EXPERIMENT_CPUS:-8}
     mem_limit: 8g
     network_mode: none
 

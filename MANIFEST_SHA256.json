@@ -8,8 +8,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7474,
-      "sha256": "872fff9bec3582844daaa1e33b6048cb744720986fef1743def78d1bef503700"
+      "bytes": 7423,
+      "sha256": "34072f0185c03e27b92309d2e60ca7842e306ce51ab054ba835b6ee58bac1181"
     },
     {
       "path": "build_report_docx.py",
@@ -18,8 +18,8 @@
     },
     {
       "path": "docker-compose.yml",
-      "bytes": 610,
-      "sha256": "a3341d08fe856abcd8efa506561011faadf6b1452d6cb3d225e348492ee9f198"
+      "bytes": 655,
+      "sha256": "5cadc0df8b917c8891babb44d385d13086082604e64fd6f503147c8e1743b9c3"
     },
     {
       "path": "experiments/README.md",
@@ -2232,11 +2232,6 @@
       "sha256": "2d888a5dbfaaae733cf7124d207a5324abda4763309e0a8375d1c6721e6d5e85"
     },
     {
-      "path": "report_references.bib",
-      "bytes": 13963,
-      "sha256": "d33ce443d2cdd81d79b57606762e349c8e1ea098832b09f48059315ebcd5ceaa"
-    },
-    {
       "path": "requirements_artifacts.txt",
       "bytes": 240,
       "sha256": "53b837e7a9a9942084fd925898cce3bbfd32675baed54a66eb6017e78bb6e06b"
@@ -2293,8 +2288,8 @@
     },
     {
       "path": "sources/revise_chapter2_citations.py",
-      "bytes": 8944,
-      "sha256": "a5480e02e4dc7e385ac0581883894f8d12a91a970ed723ac28e59e801faff8bb"
+      "bytes": 9090,
+      "sha256": "da7e39c521c425bbeca2942ad98a589bfaa3f2b79ae8b8db19164055d2ba949e"
     },
     {
       "path": "theory_examples.py",

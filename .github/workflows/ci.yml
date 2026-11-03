@@ -1,0 +1,91 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  # GitHub-hosted runners have fewer CPUs than the 8 used for the reported runs.
+  EXPERIMENT_CPUS: "2"
+
+jobs:
+  integrity:
+    name: Check manifest
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Verify MANIFEST_SHA256.json
+        run: python3 .github/scripts/verify_manifest.py
+
+  experiments:
+    name: Run experiments (quick)
+    needs: integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Pass the runner user to Docker
+        run: |
+          echo "HOST_UID=$(id -u)" >> "$GITHUB_ENV"
+          echo "HOST_GID=$(id -g)" >> "$GITHUB_ENV"
+      - name: Build image
+        run: docker compose build experiments
+      - name: Run a quick experiment and compare it with the stored results
+        run: |
+          docker compose run --rm -T experiments sh -euc '
+            python run_experiments.py --output /tmp/quick --scales 100 --mvt-features 100 --zooms 13 --repeats 1
+            python ../.github/scripts/verify_quick_run.py /tmp/quick results
+            python ../.github/scripts/verify_quick_run.py /tmp/quick results_group
+          '
+
+  report:
+    name: Build figures and report
+    needs: integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Pass the runner user to Docker
+        run: |
+          echo "HOST_UID=$(id -u)" >> "$GITHUB_ENV"
+          echo "HOST_GID=$(id -g)" >> "$GITHUB_ENV"
+      - name: Build image
+        run: docker compose build publish
+      - name: Run theory examples
+        run: docker compose run --rm -T publish python theory_examples.py
+      - name: Check that stored theory results are current
+        run: git diff --exit-code -- theory_examples_results.json
+      - name: Draw figures
+        run: |
+          docker compose run --rm -T publish sh -euc '
+            python figures/draw_theory_figures.py
+            python figures/draw_result_figures.py
+          '
+      - name: Build DOCX and PDF
+        run: |
+          docker compose run --rm -T publish sh -euc '
+            python build_report_docx.py
+            soffice -env:UserInstallation=file:///tmp/lo --headless --convert-to pdf Spatial_Object_Representation_Report.docx
+            pdfinfo Spatial_Object_Representation_Report.pdf
+          '
+      - name: Check that the combined report content is current
+        run: git diff --exit-code -- sources/report_content_complete.json
+      - name: Upload report
+        uses: actions/upload-artifact@v7
+        with:
+          name: report-${{ github.sha }}
+          path: |
+            Spatial_Object_Representation_Report.docx
+            Spatial_Object_Representation_Report.pdf
+          if-no-files-found: error
+          retention-days: 14

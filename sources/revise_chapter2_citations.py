@@ -94,7 +94,7 @@ path.write_text(json.dumps(references,ensure_ascii=False,indent=2)+'\n',encoding
 # Use an inbook record in the accompanying report-specific BibTeX, not in the
 # archived bibliography of all previously searched books and papers.
 bib=ROOT/'report_references.bib'
-content=bib.read_text(encoding='utf-8')
+content=bib.read_text(encoding='utf-8') if bib.exists() else None
 chapter='''@inbook{R01_Rigaux2002_Ch2,
   author = {Rigaux, Philippe and Scholl, Michel and Voisard, Agnès},
   title = {Representation of Spatial Objects},
@@ -108,7 +108,9 @@ chapter='''@inbook{R01_Rigaux2002_Ch2,
   url = {https://www.sciencedirect.com/book/monograph/9781558605886/spatial-databases},
   urldate = {2026-11-03}
 }'''
-if '@book{R01_Rigaux2002,' in content:
+if content is None:
+    pass  # The optional BibTeX file is absent; bibliography_report.json is the source of record.
+elif '@book{R01_Rigaux2002,' in content:
     start=content.index('@book{R01_Rigaux2002,')
     end=content.index('\n\n@',start)
     bib.write_text(content[:start]+chapter+content[end:],encoding='utf-8')

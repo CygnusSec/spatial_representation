@@ -62,7 +62,6 @@ metadata of the new run; times are not expected to match exactly.
 | `experiments/results/data` | Actual GeoJSON, TopoJSON, KML, GeoParquet and PBF tile files. |
 | `theory_examples.py` | Examples of the two algorithms, using only the Python standard library. |
 | `theory_examples_results.json` | Verification results that were run. |
-| `report_references.bib` | The 22 sources used. |
 | `sources/bibliography_report.json` | Mapping of numbers [1]–[22] to the R source codes. |
 
 ## 4. Rebuilding the figures
